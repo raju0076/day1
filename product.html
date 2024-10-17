@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productDetails</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+        table{
+            width: 80%;
+            border-spacing:0px;
+            border: 2px solid rgba(71, 69, 69, 0.842);
+            border-radius:10px;
+            overflow: hidden;
+            
+
+            
+        }
+
+       th,td{
+        padding:10px;
+        text-align: left;
+ 
+       }
+        thead{
+            background-color: green;
+        }
+        thead,td{
+            border:1px solid black
+        }
+        .span{
+            background-color: rgb(178, 182, 181);
+            font-weight: bold;
+            font-size: 18px;
+           
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price per Unit</th>
+                <th>Description</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>product 1</td>
+                <td>2</td>
+                <td>$10</td>
+                <td>This is product1</td>
+                <td>$20</td>
+            </tr>
+            <tr>
+                <td>product 2</td>
+                <td>3</td>
+                <td>$20</td>
+                <td>This is product 2</td>
+                <td>$60</td>
+            </tr>
+            <tr>
+                <td colspan="4";  class="span">sum</td>
+                <td>$80</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
