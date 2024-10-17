@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align:center;
+            margin-top: -10px 0px -15px 0px;
+            font-size: 35px;
+        }
+        textarea::placeholder{
+            font-size:20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px auto;
+            padding: 10px;
+            width: 550px;
+            height:auto;
+            background-color: crimson;
+        }
+        form {
+            width: auto;
+            max-width:auto;
+            margin-top:-20px;
+            background-color: aliceblue;
+            padding: 30px;
+            border-radius: 10px;
+            
+            
+           
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .radio {
+            display: flex;
+            width: 500px;
+            gap: 1px;
+            margin-bottom: 20px;
+            column-gap:10px;
+        }
+       
+        .req{
+            color: gray;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border:1px white;
+            border-radius: 4px;
+            cursor: pointer;
+            display: inline-block;
+            width: 20%;
+            margin-top: 1px;
+            margin-left: 35%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form>
+        <label for="feedbackform">Feedback Type:</label>
+        <select id="feedback-type" name="feedback-type" required>
+            <option value="" disabled selected>Select feedback type</option>
+            <option value="general">General Feedback</option>
+            <option value="bug-report">Bug Report</option>
+            <option value="feature-request">Feature Request</option>
+        </select>
+        <br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="enter your message"></textarea>
+         <br><br>
+        <label>Website Rating:</label>
+        <div class="radio">
+            <label for="rating1">Excellent<input type="radio" id="rating1" name="rating" value="1" required></label>
+            
+            
+            <label for="rating2">Good<input type="radio" id="rating2" name="rating" value="2"></label>
+            
+            
+            <label for="rating3">Average <input type="radio" id="rating3" name="rating" value="3"></label>
+            
+            
+            <label for="rating4">Poor <input type="radio" id="rating4" name="rating" value="4"></label>
+           
+            
+        </div>
+        
+        <label for="age">Your Age (10-100):</label>
+        <input type="number" id="age" name="age" min="10" max="100" required>
+        <br><br>
+        <label for="email">Email <span class="req">(required)</span>:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="password">Password <span class="req">(Min 8 characters)</span>:</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+        <br><br>
+
+        <label for="website">Website URL (Optional):</label>
+        <input type="url" id="website" name="website">
+        <br><br>
+        
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            I agree to the terms and conditions.
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>
